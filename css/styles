@@ -1,14 +1,13 @@
 body {
-  background-color: #000000;
-  color: #000000;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  background-image: url('tile_bg.gif');
+  background-image: url('tile_bg.png');
   background-repeat: repeat;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #000;
 }
 
 h1, h2 {
   font-family: "Times New Roman", serif;
-  color: #000000;
+  color: #000;
   text-align: center;
 }
 
@@ -16,16 +15,11 @@ a {
   color: blue;
   text-decoration: underline;
 }
-
 a:hover {
-  color: red;
+  color: hotpink;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
-}
-
-li {
-  margin: 10px 0;
 }
