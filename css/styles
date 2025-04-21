@@ -1,8 +1,9 @@
 body {
- 
-  background-color: red;
-
+  background-image: url('https://www.w3schools.com/css/img_lights.jpg');
 }
+
+
+
 h1, h2 {
   font-family: "Times New Roman", serif;
   color: #000;
