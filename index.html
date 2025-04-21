@@ -6,22 +6,23 @@
   <style>
     .floating {
       position: absolute;
+      z-index: 10;
     }
-    #uc { top: 50px; left: 100px; }
-    #blink { top: 300px; left: 600px; }
-    #mail { top: 200px; left: 50px; }
-    #counter { top: 400px; left: 400px; }
   </style>
 </head>
 <body>
 
-  <!-- Vaporwave GIFs scattered -->
-  <div id="uc" class="floating"><img src="under_construction.gif" alt="Under Construction"></div>
-  <div id="blink" class="floating"><img src="blinking_text.gif" alt="Blinking Text"></div>
-  <div id="mail" class="floating"><img src="mailbox.gif" alt="Mailbox"></div>
-  <div id="counter" class="floating"><img src="counter.gif" alt="Counter"></div>
+  <!-- Floating GIFs -->
+  <img src="under_construction.gif" alt="Under Construction" class="floating" id="gif1">
+  <img src="blinking_text.gif" alt="Blinking Text" class="floating" id="gif2">
+  <img src="mailbox.gif" alt="Mailbox" class="floating" id="gif3">
+  <img src="counter.gif" alt="Counter" class="floating" id="gif4">
 
-  <!-- Main Content -->
+  <!-- Optional Extra Flamingos & Palms -->
+  <img src="flamingo.gif" alt="Flamingo" class="floating" id="gif5">
+  <img src="palm_tree.gif" alt="Palm Tree" class="floating" id="gif6">
+
+  <!-- Main Content Table -->
   <table align="center" width="800" border="1" cellpadding="10" bgcolor="#FFFF99">
     <tr>
       <td align="center" colspan="2">
@@ -45,6 +46,17 @@
       </td>
     </tr>
   </table>
+
+  <script>
+    const gifs = ['gif1', 'gif2', 'gif3', 'gif4', 'gif5', 'gif6'];
+    gifs.forEach(id => {
+      const el = document.getElementById(id);
+      const x = Math.floor(Math.random() * (window.innerWidth - 150));
+      const y = Math.floor(Math.random() * (window.innerHeight - 150));
+      el.style.left = `${x}px`;
+      el.style.top = `${y}px`;
+    });
+  </script>
 
 </body>
 </html>
