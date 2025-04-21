@@ -7,22 +7,29 @@
     .floating {
       position: absolute;
       z-index: 10;
+      max-width: 100px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating GIFs -->
+  <!-- Floating Vaporwave Images -->
   <img src="under_construction.gif" alt="Under Construction" class="floating" id="gif1">
   <img src="blinking_text.gif" alt="Blinking Text" class="floating" id="gif2">
   <img src="mailbox.gif" alt="Mailbox" class="floating" id="gif3">
   <img src="counter.gif" alt="Counter" class="floating" id="gif4">
 
-  <!-- Optional Extra Flamingos & Palms -->
-  <img src="flamingo.gif" alt="Flamingo" class="floating" id="gif5">
-  <img src="palm_tree.gif" alt="Palm Tree" class="floating" id="gif6">
+  <!-- Flamingos & Palms -->
+  <img src="flamingo1.png" alt="Flamingo 1" class="floating" id="fl1">
+  <img src="flamingo2.png" alt="Flamingo 2" class="floating" id="fl2">
+  <img src="palm1.png" alt="Palm 1" class="floating" id="pl1">
+  <img src="palm2.png" alt="Palm 2" class="floating" id="pl2">
+  <img src="palm3.png" alt="Palm 3" class="floating" id="pl3">
+  <img src="palm4.png" alt="Palm 4" class="floating" id="pl4">
+  <img src="star.png" alt="Star" class="floating" id="star1">
+  <img src="mailbox.png" alt="Mailbox Icon" class="floating" id="mail1">
 
-  <!-- Main Content Table -->
+  <!-- Main Content -->
   <table align="center" width="800" border="1" cellpadding="10" bgcolor="#FFFF99">
     <tr>
       <td align="center" colspan="2">
@@ -47,12 +54,19 @@
     </tr>
   </table>
 
+  <!-- JavaScript to Randomize Positions -->
   <script>
-    const gifs = ['gif1', 'gif2', 'gif3', 'gif4', 'gif5', 'gif6'];
-    gifs.forEach(id => {
+    const elements = [
+      'gif1', 'gif2', 'gif3', 'gif4',
+      'fl1', 'fl2',
+      'pl1', 'pl2', 'pl3', 'pl4',
+      'star1', 'mail1'
+    ];
+
+    elements.forEach(id => {
       const el = document.getElementById(id);
-      const x = Math.floor(Math.random() * (window.innerWidth - 150));
-      const y = Math.floor(Math.random() * (window.innerHeight - 150));
+      const x = Math.floor(Math.random() * (window.innerWidth - 120));
+      const y = Math.floor(Math.random() * (window.innerHeight - 120));
       el.style.left = `${x}px`;
       el.style.top = `${y}px`;
     });
