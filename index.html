@@ -125,5 +125,13 @@ border="0" title="website counter" alt="website counter"></a></noscript>
     });
   </script>
 
+<script src="https://unpkg.com/ruffle-rs@latest/ruffle.js"></script>
+<div id="flash-container"></div>
+<script>
+  const ruffle = window.RufflePlayer.newPlayer();
+  document.getElementById('flash-container').appendChild(ruffle);
+  ruffle.load('path_to_flash_game.swf');
+</script>
+  
 </body>
 </html>
